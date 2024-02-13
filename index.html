@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+</head>
+
+<body>
+  <a-scene background="color:white">
+
+    <a-camera position="0 8 15"></a-camera>
+
+    <a-assets timeout="10000">
+
+    	<a-asset-item id="tiger" src="./models/tiger/Mesh_BengalTiger.gltf"></a-asset-item>
+
+    	<a-asset-item id="girl" src="./models/woman_dress_2/scene.gltf"></a-asset-item>
+
+    	<a-asset-item id="street" src="./models/horror_street_lamp/scene.gltf"></a-asset-item>
+
+    </a-assets>	
+
+<!--street-->
+	<a-entity>
+		<a-entity position="0 0 0" rotation="0 0 0" scale="1 1 1" gltf-model="#street">
+		</a-entity>
+	</a-entity>
+
+<!--girl-->
+    <a-entity>
+      <a-entity position="-2 0.4 3" rotation="0 -90 0" scale="1 1 1" gltf-model="#girl"
+        shadow="cast: true">
+      </a-entity>
+    </a-entity>
+
+<!--Tiger-->
+    <a-entity>
+      <a-entity position="-5 2 0" rotation="0 55 0" scale="0.05 0.05 0.05" gltf-model="#tiger" shadow="cast: true;">
+      </a-entity>
+    </a-entity>
+
+
+
+</a-scene>
+</body>
+</html>
